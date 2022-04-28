@@ -12,7 +12,7 @@ class AxiosTest extends React.Component {
       .get('/ajax/boardList')
       .then((res) => {
         console.log('CONNECTION SUCCESS !!');
-        console.log(res);
+        console.log(res.data);
       })
       .catch((err) => {
         console.log('CONNECTION FAILURE !!');
