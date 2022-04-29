@@ -53,11 +53,15 @@ class Detail extends React.Component {
                   </div>
                 </div>
               </div>
-              <div class="clearfix">
-                <button class="btn btn-secondary float-start"> 목록 </button>
-                <button class="btn btn-warning float-end"> 삭제 </button>
-                <button class="btn btn-primary float-end"> 수정 </button>
-              </div>
+              <div class="my-3 d-flex justify-content-between">
+                    <div>
+                      <button class="btn btn-secondary"> 목록 </button>
+                    </div>
+                    <div>                      
+                      <button class="btn btn-primary mx-3"> 등록 </button>
+                      <button class="btn btn-danger"> 삭제 </button>
+                    </div>
+                  </div>
             </article>
           </section>
         </main>
