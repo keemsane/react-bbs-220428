@@ -14,7 +14,7 @@ function App() {
     <HashRouter>
       <Navigation />
       <Route path="/" exact={true} component={Home} />
-      <Route path="/detail" component={Detail} />
+      <Route path="/detail/:boardno" component={Detail} />
       <Route path="/write" component={Write} />
       
     </HashRouter>
