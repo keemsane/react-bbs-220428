@@ -1,7 +1,37 @@
 import React from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
+  state = {
+    boardNo: '',
+    title: '',
+    userId: '',
+    createDate: '',
+    hitCnt: 0,
+  };
+  componentDidMount() {
+    const boardNo = this.props.match.params.boardno;
+    const url = `ajax/boardList`;
+    axios
+      .get(url)
+      .then((res) => {
+        console.log('CONNECTION SUCCESS !!');
+        console.log(res.data);
+        this.setState({
+          boardNo: res.data.boardNo,
+          title: res.data.title,
+          content: res.data.content,
+          userId: res.data.createId,
+          createDate: res.data.createDate,
+          hitCnt: res.data.hitCnt,
+        })
+      })
+      .catch((err) => {
+        console.log('CONNECTION FAILURE !!');
+        console.log(err);
+      });
+  }
   render() {
     return (
       <div>
